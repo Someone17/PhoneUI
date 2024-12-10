@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Ebac.Singleton;
+using DG.Tweening;
 
 namespace Screens{
 
@@ -13,9 +14,16 @@ public class ScreenManager : Singleton<ScreenManager>
 
     private ScreenBase _currentScreen;
 
+    public Vector3 vec;
+
     private void Start(){
+        
         HideAll();
         ShowByType(startScreen);
+    }
+
+    private void GetRandom(){
+      screenBases[Random.Range(0, screenBases.Count)].animationDuration = 1;
     }
 
     public void ShowByType(ScreenType type){
