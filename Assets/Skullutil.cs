@@ -6,6 +6,8 @@ using Random = UnityEngine.Random;
 
 public static class Skullutil 
 {
+  
+  
   [UnityEditor.MenuItem("Ebac/Test")]
   public static void Test(){
     Debug.Log("Test");
@@ -23,6 +25,11 @@ public static class Skullutil
   public static void Scale(this GameObject t, float size = 1.2f){
       t.transform.localScale = Vector3.one * size;
     }
+
+    public static void ScaleVector(this Vector3 t, float size = 1.2f){
+      //t.localScale = Vector3.one * size;
+    }
+
   
   public static T GetRandom<T>(this T[] array){
     if(array.Length == 0)
@@ -45,4 +52,6 @@ public static class Skullutil
     int randomIndex = Random.Range(0, list.Count);
     return list[randomIndex];
   }
+
+  
 }

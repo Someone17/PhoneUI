@@ -4,7 +4,8 @@ using UnityEngine;
 using Ebac.Singleton;
 using DG.Tweening;
 
-namespace Screens{
+namespace Screens
+{
 
 public class ScreenManager : Singleton<ScreenManager>
 {
